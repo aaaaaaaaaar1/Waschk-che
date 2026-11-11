@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f6fa">
+  <title>Waschküche – Live Status</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <div class="logo">🧺</div>
+      <h1>Waschküche</h1>
+      <p>Der aktuelle Status unserer Waschmaschinen</p>
+      <div class="live">
+        <span class="live-dot"></span>
+        Live-Status
+      </div>
+    </header>
+
+    <section class="machines">
+      <article class="machine" id="machine-1">
+        <div class="machine-top">
+          <h2>Maschine links</h2>
+          <span class="status">Lädt...</span>
+        </div>
+        <div class="timer">--:--:--</div>
+        <p class="description">Bitte warten...</p>
+        <button class="start-button" onclick="startMachine(1)" disabled>
+          Waschen starten
+        </button>
+        <button class="release-button" onclick="releaseMachine(1)" hidden>
+          Maschine freigeben
+        </button>
+      </article>
+
+      <article class="machine" id="machine-2">
+        <div class="machine-top">
+          <h2>Maschine rechts</h2>
+          <span class="status">Lädt...</span>
+        </div>
+        <div class="timer">--:--:--</div>
+        <p class="description">Bitte warten...</p>
+        <button class="start-button" onclick="startMachine(2)" disabled>
+          Waschen starten
+        </button>
+        <button class="release-button" onclick="releaseMachine(2)" hidden>
+          Maschine freigeben
+        </button>
+      </article>
+    </section>
+
+    <div id="message" role="status"></div>
+
+    <footer>
+      <p>Waschküche · Studentenhaus</p>
+      <p>Ein Waschgang dauert 200 Minuten.</p>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
